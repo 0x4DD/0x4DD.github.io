@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAHMUDA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Syne:wght@700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="page-curtain" id="pageCurtain">
+        <span class="curtain-mark"></span>
+    </div>
+
+    <div class="grain-overlay"></div>
+    <div class="vignette-overlay"></div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <div class="container">
+        <nav>
+            <div class="nav-brand">MAHMUDA<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#projects" class="fly-link"><span class="nav-link-text">Projects</span><span class="nav-plane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="3" x2="10" y2="14"></line><polygon points="21 3 14 21 10 14 3 10 21 3"></polygon></svg></span></a></li>
+                <li><a href="#skills" class="fly-link"><span class="nav-link-text">Skills</span><span class="nav-plane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="3" x2="10" y2="14"></line><polygon points="21 3 14 21 10 14 3 10 21 3"></polygon></svg></span></a></li>
+                <li><a href="#experience" class="fly-link"><span class="nav-link-text">Experience</span><span class="nav-plane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="3" x2="10" y2="14"></line><polygon points="21 3 14 21 10 14 3 10 21 3"></polygon></svg></span></a></li>
+                <li><a href="#education" class="fly-link"><span class="nav-link-text">Education</span><span class="nav-plane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="3" x2="10" y2="14"></line><polygon points="21 3 14 21 10 14 3 10 21 3"></polygon></svg></span></a></li>
+                <li><a href="#certs" class="fly-link"><span class="nav-link-text">Certifications</span><span class="nav-plane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="3" x2="10" y2="14"></line><polygon points="21 3 14 21 10 14 3 10 21 3"></polygon></svg></span></a></li>
+                <li><a href="#contact" class="fly-link"><span class="nav-link-text">Contact</span><span class="nav-plane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="3" x2="10" y2="14"></line><polygon points="21 3 14 21 10 14 3 10 21 3"></polygon></svg></span></a></li>
+            </ul>
+        </nav>
+
+
+        <section class="hero-section">
+            <div class="hero-name-wrapper">
+                <h1 class="hero-name" id="hero-name">MAHMUDA</h1>
+            </div>
+            <div class="hero-about" id="hero-about"></div>
+        </section>
+
+        
+
+        <section id="projects">
+            <div class="marquee-header">
+                <div class="marquee-track" data-marquee-text="Selected Projects"></div>
+                <span class="section-num">[ 01 ]</span>
+            </div>
+            <div class="sticky-stack-container">
+
+                <div class="tilt-card project-card reveal">
+                    <div>
+                        <div class="project-top">
+                            <span class="project-tag-id">PRJ_01</span>
+                            <i class="fa-solid fa-users-gear project-icon"></i>
+                        </div>
+                        <h3 class="project-title sc-text">Company ERP System</h3>
+                        <p class="project-desc word-reveal">Developed a role-based Enterprise Resource Planning (ERP) System for managing employees, attendance, payroll, leave requests, and projects, with automated employee credential generation and authentication.</p>
+                        <div class="project-tech sc-text">
+                            <span class="tech-pill">Java</span>
+                            <span class="tech-pill">JavaFX</span>
+                            <span class="tech-pill">MySQL</span>
+                        </div>
+                        <i class="fa-solid devicon-mysql-plain grid-watermark" style="font-size: 15rem;"></i>
+                    </div>
+                    <a href="https://github.com/mahmuda-bk/company-erp-system" target="_blank" class="project-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="tilt-card project-card reveal">
+                    <div class="card-watermarks">
+                        <i class="devicon-java-plain grid-watermark" style="font-size: 20rem;"></i>
+                    </div>
+                    <div>
+                        <div class="project-top">
+                            <span class="project-tag-id">PRJ_02</span>
+                            <i class="fa-solid fa-network-wired project-icon"></i>
+                        </div>
+                        <h3 class="project-title sc-text">Network Cable Optimizer</h3>
+                        <p class="project-desc word-reveal">Designed an interactive network design tool that optimizes cable layout and cost using Minimum Spanning Tree algorithms (Kruskal’s and Prim’s) with visual floor-map interface.</p>
+                        <div class="project-tech sc-text">
+                            <span class="tech-pill">Java</span>
+                            <span class="tech-pill">Swing</span>
+                            <span class="tech-pill">DSA</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/mahmuda-bk/NetworkCableOptimizer" target="_blank" class="project-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="tilt-card project-card reveal">
+                    <div>
+                        <div class="project-top">
+                            <span class="project-tag-id">PRJ_03</span>
+                            <i class="fa-solid fa-code project-icon"></i>
+                        </div>
+                        <h3 class="project-title sc-text">Small Expression Compiler</h3>
+                        <p class="project-desc word-reveal">Built a lightweight expression compiler supporting full lexical analysis, parsing, semantic evaluation, and scoped variable resolution.</p>
+                        <div class="project-tech sc-text">
+                            <span class="tech-pill">C</span>
+                            <span class="tech-pill">Flex</span>
+                            <span class="tech-pill">Bison</span>
+                        </div>
+                        <i class="fa-solid fa-sitemap grid-watermark" style="font-size: 15rem;"></i>
+                    </div>
+                    <a href="https://github.com/mahmuda-bk/small-expression-compiler" target="_blank" class="project-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="tilt-card project-card reveal">
+                    <div>
+                        <div class="project-top">
+                            <span class="project-tag-id">PRJ_04</span>
+                            <i class="fa-solid fa-microchip project-icon"></i>
+                        </div>
+                        <h3 class="project-title sc-text">Hand Gesture Controlled Robot</h3>
+                        <p class="project-desc word-reveal">Built a wireless hand gesture controlled robot using ADXL345 accelerometer for motion detection, NRF24L01 for data transmission, and L298N motor driver to control four motors based on real-time hand movements.</p>
+                        <div class="project-tech sc-text">
+                            <span class="tech-pill">Arduino</span>
+                            <span class="tech-pill">ADXL345</span>
+                            <span class="tech-pill">NRF24L01</span>
+                        </div>
+                        <i class="fa-solid devicon-arduino-plain grid-watermark" style="font-size: 15rem;"></i>
+                    </div>
+                    <a href="https://github.com/mahmuda-bk/hand-gesture-controlled-robot" target="_blank" class="project-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        
+        <section id="skills">
+            <div class="marquee-header">
+                <div class="marquee-track" data-marquee-text="Technical Skills"></div>
+                <span class="section-num">[ 02 ]</span>
+            </div>
+
+            <div class="swiss-grid-container">
+                <div class="swiss-grid-cell cell-tall smooth-reveal-item">
+                    <div class="cell-header"><span class="cell-tag">LANG</span></div>
+                    <div class="cell-body">
+                        <h3 class="cell-title">C Language</h3>
+                    </div>
+                    <i class="devicon-c-plain grid-watermark"></i>
+                </div>
+
+                <div class="swiss-grid-cell smooth-reveal-item">
+                    <div class="cell-header"><span class="cell-tag">LANG</span></div>
+                    <div class="cell-body">
+                        <h3 class="cell-title">C++</h3>
+                        <p class="cell-subtitle">OOP & Data Structures</p>
+                    </div>
+                    <i class="devicon-cplusplus-plain grid-watermark"></i>
+                </div>
+
+                <div class="swiss-grid-cell cell-wide smooth-reveal-item">
+                    <div class="cell-header"><span class="cell-tag">SEC TOOL</span></div>
+                    <div class="cell-body">
+                        <h3 class="cell-title">Burp Suite</h3>
+                        <p class="cell-subtitle">Web Security Interception & Automated Scanning</p>
+                    </div>
+                    <i class="fa-solid fa-bug grid-watermark"></i>
+                </div>
+
+                <div class="swiss-grid-cell smooth-reveal-item">
+                    <div class="cell-header"><span class="cell-tag">LANG</span></div>
+                    <div class="cell-body">
+                        <h3 class="cell-title">Python</h3>
+                    </div>
+                    <i class="devicon-python-plain grid-watermark"></i>
+                </div>
+
+                <div class="swiss-grid-cell cell-huge smooth-reveal-item">
+                    <div class="cell-header"><span class="cell-tag">OPERATING SYSTEM</span></div>
+                    <div class="cell-body">
+                        <h3 class="cell-title" style="font-size: 2.2rem;">Kali / Ubuntu Linux</h3>
+                    </div>
+                    <i class="devicon-linux-plain grid-watermark" style="font-size: 11rem;"></i>
+                </div>
+
+                <div class="swiss-grid-cell smooth-reveal-item">
+                    <div class="cell-header"><span class="cell-tag">LANG</span></div>
+                    <div class="cell-body">
+                        <h3 class="cell-title">Java</h3>
+                        <p class="cell-subtitle">Enterprise Software</p>
+                    </div>
+                    <i class="devicon-java-plain grid-watermark"></i>
+                </div>
+
+                <div class="swiss-grid-cell cell-tall smooth-reveal-item">
+                    <div class="cell-header"><span class="cell-tag">DATA</span></div>
+                    <div class="cell-body">
+                        <h3 class="cell-title">SQL Database</h3>
+                        <p class="cell-subtitle">Relational Queries, Constraints & Data Integrity</p>
+                    </div>
+                    <i class="fa-solid fa-database grid-watermark"></i>
+                </div>
+
+                <div class="swiss-grid-cell cell-wide cell-large-text smooth-reveal-item">
+                    <div class="grid-meta-text">PENETRATION<br>TESTING</div>
+                </div>
+
+                <div class="swiss-grid-cell smooth-reveal-item">
+                    <div class="cell-header"><span class="cell-tag">SEC TOOL</span></div>
+                    <div class="cell-body">
+                        <h3 class="cell-title">Nmap</h3>
+                        <p class="cell-subtitle">Network Mapping</p>
+                    </div>
+                    <i class="fa-solid fa-network-wired grid-watermark"></i>
+                </div>
+
+                <div class="swiss-grid-cell cell-wide smooth-reveal-item">
+                    <div class="cell-header"><span class="cell-tag">SEC TOOL</span></div>
+                    <div class="cell-body">
+                        <h3 class="cell-title">Wireshark</h3>
+                        <p class="cell-subtitle">Real-time Packet Capture & Network Forensics</p>
+                    </div>
+                    <i class="fa-solid fa-fish-fins grid-watermark"></i>
+                </div>
+
+                <div class="swiss-grid-cell smooth-reveal-item">
+                    <div class="cell-header"><span class="cell-tag">SEC TOOL</span></div>
+                    <div class="cell-body">
+                        <h3 class="cell-title">Metasploit</h3>
+                        <p class="cell-subtitle">Exploitation Framework</p>
+                    </div>
+                    <i class="fa-solid fa-terminal grid-watermark"></i>
+                </div>
+
+                <div class="swiss-grid-cell cell-tall smooth-reveal-item">
+                    <div class="cell-header"><span class="cell-tag">DEV</span></div>
+                    <div class="cell-body">
+                        <h3 class="cell-title">Git / GitHub</h3>
+                        <p class="cell-subtitle">Version Control & Collaborative Development</p>
+                    </div>
+                    <i class="devicon-git-plain grid-watermark"></i>
+                </div>
+
+                <div class="swiss-grid-cell smooth-reveal-item">
+                    <div class="cell-header"><span class="cell-tag">DEV</span></div>
+                    <div class="cell-body">
+                        <h3 class="cell-title">Docker</h3>
+                        <p class="cell-subtitle">Containerization</p>
+                    </div>
+                    <i class="devicon-docker-plain grid-watermark"></i>
+                </div>
+
+                <div class="swiss-grid-cell cell-wide smooth-reveal-item">
+                    <div class="cell-header"><span class="cell-tag">NETWORKING</span></div>
+                    <div class="cell-body">
+                        <h3 class="cell-title">Cisco Packet Tracer</h3>
+                    </div>
+                    <i class="fa-solid fa-diagram-project grid-watermark"></i>
+                </div>
+
+                <div class="swiss-grid-cell cell-wide cell-large-text smooth-reveal-item" style="grid-column: span 3;">
+                    <div class="grid-meta-text">WEB APPLICATION<br>SECURITY</div>
+                </div>
+
+            </div>
+        </section>
+
+
+      
+
+        <section id="experience">
+            <div class="marquee-header">
+                <div class="marquee-track" data-marquee-text="Experience"></div>
+                <span class="section-num">[ 03 ]</span>
+            </div>
+            <div class="sticky-stack-container">
+                <div class="tilt-card exp-item reveal">
+                    <div>
+                        <div class="exp-title sc-text">Jr. Penetration Tester (Intern)</div>
+                        <div class="exp-org sc-text">Byte Capsule, Dhaka (Remote)</div>
+                    </div>
+                    <div class="exp-desc word-reveal">
+                        Worked on vulnerability discovery, pentesting reports, blue team practices and cloud security research.
+                    </div>
+                    <div class="exp-date sc-text">Jan 2026 – Mar 2026</div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="education">
+            <div class="marquee-header">
+                <div class="marquee-track" data-marquee-text="Education"></div>
+                <span class="section-num">[ 04 ]</span>
+            </div>
+            <div class="edu-scroll-track">
+                <div class="edu-stage">
+                    <div class="tilt-card edu-card">
+                        <h3 class="edu-degree sc-text">Secondary School Certificate (SSC)</h3>
+                        <div class="edu-school sc-text">Science Discipline</div>
+                        <p class="edu-desc word-reveal">
+                            Institution: <span class="edu-school-name"><i>Monipur High School &amp; College</i></span><br>
+                            GPA: <span class="edu-gpa">5.00 / 5.00</span>
+                        </p>
+                    </div>
+                    <div class="tilt-card edu-card">
+                        <h3 class="edu-degree sc-text">Higher Secondary Certificate (HSC)</h3>
+                        <div class="edu-school sc-text">Science Discipline</div>
+                        <p class="edu-desc word-reveal">
+                            Institution: <span class="edu-school-name"><i>Birshreshtha Noor Mohammad Public College</i></span><br>
+                            GPA: <span class="edu-gpa">5.00 / 5.00</span>
+                        </p>
+                    </div>
+                    <div class="tilt-card edu-card">
+                        <h3 class="edu-degree sc-text">BSc. in Computer Science &amp; Engineering</h3>
+                        <div class="edu-school sc-text">Undergraduate Program</div>
+                        <p class="edu-desc word-reveal">
+                            Institution: <span class="edu-school-name"><i>Bangladesh University of Professionals</i></span><br>
+                            CGPA: <span class="edu-gpa">3.75 / 4.00</span> (Till 4th Semester)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certs">
+            <div class="marquee-header">
+                <div class="marquee-track" data-marquee-text="Certifications"></div>
+                <span class="section-num">[ 05 ]</span>
+            </div>
+
+            <div class="certs-grid reveal">
+                <div class="cert-flip-card">
+                    <div class="cert-flip-inner">
+                        <div class="cert-front">
+                            <div class="cert-header-line">
+                                <span>CERT // 01</span>
+                                <span>[SEC]</span>
+                            </div>
+                            <div class="cert-big-title">Certified Network Security Practitioner (CNSP)</div>
+                            <div class="cert-subtitle">The SecOps Group</div>
+                        </div>
+                        <div class="cert-back">
+                            <div>
+                                <div class="cert-back-header">Certified Network Security Practitioner (CNSP)</div>
+                                <div class="cert-back-skills-label">Skills Covered</div>
+                                <div class="cert-back-skills">
+                                    <span class="cert-skill-pill">Network security fundamentals</span>
+                                    <span class="cert-skill-pill">Network Traffic</span>
+                                    <span class="cert-skill-pill">Protocol Security</span>
+                                </div>
+                            </div>
+                            <a href="#" target="_blank" class="cert-link-btn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-flip-card">
+                    <div class="cert-flip-inner">
+                        <div class="cert-front">
+                            <div class="cert-header-line">
+                                <span>CERT // 02</span>
+                                <span>[CTF]</span>
+                            </div>
+                            <div class="cert-big-title">Certified Blue Team Practitioner (CBTP)</div>
+                            <div class="cert-subtitle">The SecOps Group</div>
+                        </div>
+                        <div class="cert-back">
+                            <div>
+                                <div class="cert-back-header">Certified Blue Team Practitioner (CBTP)</div>
+                                <div class="cert-back-skills-label">Skills Covered</div>
+                                <div class="cert-back-skills">
+                                    <span class="cert-skill-pill">Defensive Security</span>
+                                    <span class="cert-skill-pill">Incident Response</span>
+                                    <span class="cert-skill-pill">Log & Threat Analysis</span>
+                                </div>
+                            </div>
+                            <a href="#" target="_blank" class="cert-link-btn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-flip-card">
+                    <div class="cert-flip-inner">
+                        <div class="cert-front">
+                            <div class="cert-header-line">
+                                <span>CERT // 03</span>
+                                <span>[SYS]</span>
+                            </div>
+                            <div class="cert-big-title">Ethical Hacking for Professionals (EHP)</div>
+                            <div class="cert-subtitle">Byte Capsule</div>
+                        </div>
+                        <div class="cert-back">
+                            <div>
+                                <div class="cert-back-header">Ethical Hacking for Professionals (EHP)</div>
+                                <div class="cert-back-skills-label">Skills Covered</div>
+                                <div class="cert-back-skills">
+                                    <span class="cert-skill-pill">Vulnerability Management</span>
+                                    <span class="cert-skill-pill">Web Security</span>
+                                    <span class="cert-skill-pill">Active Directory Pentesting</span>
+                                    <span class="cert-skill-pill">Security Reporting & Remediation Prioritization</span>
+                                </div>
+                            </div>
+                            <a href="#" target="_blank" class="cert-link-btn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <div class="container">
+
+            <div class="editorial-layout">
+                <div class="editorial-title-wrap reveal">
+                    <h2 class="editorial-headline">
+                        GET 
+                        <span class="outline">IN</span>  TOUCH
+                    </h2>
+                </div>
+
+                <div class="editorial-body reveal">
+
+                    <div class="floating-icons-container">
+                        <a href="https://linkedin.com/in/mahmuda-binte-kabir" target="_blank" class="pure-icon-btn"
+                            data-tooltip="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/mahmuda-bk" target="_blank" class="pure-icon-btn"
+                            data-tooltip="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://x.com/Mahmuda_BK" target="_blank" class="pure-icon-btn"
+                            data-tooltip="X">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="https://discord.com/users/mahmuda56" target="_blank" class="pure-icon-btn" data-tooltip="Discord">
+                            <i class="fa-brands fa-discord"></i>
+                        </a>
+                    </div>
+
+                    <div class="editorial-ctas">
+                        <a href="resume.pdf" target="_blank" download class="editorial-btn editorial-btn-accent">
+                            <span>CHECK MY CV</span>
+                            <i class="fa-solid fa-arrow-down-long"></i>
+                        </a>
+
+                        <a href="mailto:mahmuda.cse.bup@gmail.com" class="editorial-btn">
+                            <span style="text-transform: none;">mahmuda.cse.bup@gmail.com</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="editorial-nav">
+                    <div></div> 
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="./js/main.js" defer></script>
+</body>
+</html>
