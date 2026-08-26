@@ -704,7 +704,7 @@
         .tilt-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 16px;
+            border-radius: 0px;
             backdrop-filter: blur(16px);
             transform-style: preserve-3d;
             transition: transform 0.4s var(--ease-out-expo), border-color 0.4s ease, box-shadow 0.4s ease;
@@ -935,9 +935,9 @@
             right: 0;
             bottom: 0;
             width: 100%;
-            max-width: 720px;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 3.2rem 2.8rem;
+            padding: 1.0rem 1.0rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -950,7 +950,7 @@
 
         .edu-degree {
             font-family: var(--font-display);
-            font-size: 2.2rem;
+            font-size: 1.6rem;
             font-weight: 800;
             text-transform: uppercase;
             margin-bottom: 0.6rem;
@@ -966,8 +966,8 @@
         }
 
         .edu-desc {
-            font-size: 1.2rem;
-            font-weight: 600;
+            font-size: 1.0rem;
+            font-weight: 500;
             color: var(--text-secondary);
             line-height: 1.6;
             transform: translateZ(25px);
@@ -1518,3 +1518,153 @@
             .edu-stage { position: static !important; height: auto !important; display: block !important; }
             .edu-card { position: static !important; opacity: 1 !important; transform: none !important; margin-bottom: 2rem; }
         }
+
+
+        
+
+        /* Touch Devices / Mobile Cursor Handling */
+@media (hover: none) and (pointer: coarse) {
+    * {
+        cursor: auto !important;
+    }
+    .cursor-dot, 
+    .cursor-outline {
+        display: none !important;
+    }
+}
+
+/* Mobile Navigation Hamburger Style */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.mobile-menu-toggle span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger Active State */
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    nav {
+        padding: 1.2rem 0;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background: rgba(10, 10, 14, 0.98);
+        backdrop-filter: blur(25px);
+        padding: 6rem 2rem 2rem;
+        transition: right 0.4s var(--ease-out-expo);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
+        z-index: 99;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1.8rem;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+    }
+
+    .hero-section {
+        min-height: 70vh;
+        padding: 4rem 0;
+    }
+
+    .hero-name {
+        font-size: clamp(2.5rem, 12vw, 4.5rem);
+    }
+
+    .hero-about {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    /* Swiss Grid System Responsive Fix */
+    .swiss-grid-container {
+        grid-template-columns: 1fr !important;
+        grid-auto-rows: auto;
+    }
+
+    .swiss-grid-cell.cell-wide, 
+    .swiss-grid-cell.cell-tall,
+    .swiss-grid-cell.cell-huge {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+
+    .swiss-grid-cell.cell-large-text {
+        display: none;
+    }
+
+    .editorial-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .editorial-ctas {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .editorial-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .certs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-num {
+        font-size: 0.85rem;
+        padding: 0.2rem 0.7rem;
+    }
+}
