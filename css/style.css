@@ -1565,106 +1565,140 @@
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* Responsive Media Queries */
+/* Responsive Fixes for Mobile & Tablet */
 @media (max-width: 900px) {
+    /* Global & Container */
     .container {
-        padding: 0 1.25rem;
-    }
-
-    nav {
-        padding: 1.2rem 0;
-    }
-
-    .mobile-menu-toggle {
-        display: flex;
-    }
-
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        max-width: 320px;
-        height: 100vh;
-        background: rgba(10, 10, 14, 0.98);
-        backdrop-filter: blur(25px);
-        padding: 6rem 2rem 2rem;
-        transition: right 0.4s var(--ease-out-expo);
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
-        z-index: 99;
-    }
-
-    .nav-menu.active {
-        right: 0;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 1.8rem;
-    }
-
-    .nav-links a {
-        font-size: 1.1rem;
-    }
-
-    .hero-section {
-        min-height: 70vh;
-        padding: 4rem 0;
-    }
-
-    .hero-name {
-        font-size: clamp(2.5rem, 12vw, 4.5rem);
-    }
-
-    .hero-about {
-        font-size: 1rem;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
     }
 
     section {
         padding: 4rem 0;
     }
 
-    /* Swiss Grid System Responsive Fix */
-    .swiss-grid-container {
-        grid-template-columns: 1fr !important;
-        grid-auto-rows: auto;
+    /* Section Header & Marquee */
+    .marquee-header {
+        margin-bottom: 2rem;
+        padding: 0.6rem 0;
+    }
+    .marquee-track .marquee-word {
+        font-size: clamp(2rem, 8vw, 3.5rem) !important;
+    }
+    .section-num {
+        font-size: 0.75rem;
+        padding: 0.15rem 0.6rem;
     }
 
+    /* Hero Section Sizes */
+    .hero-section {
+        min-height: auto;
+        padding: 4rem 0 3rem;
+    }
+    .hero-name {
+        font-size: clamp(2.2rem, 11vw, 4rem) !important;
+        letter-spacing: -0.02em;
+    }
+    .hero-about {
+        font-size: 0.95rem;
+        min-height: auto;
+        line-height: 1.6;
+    }
+
+    /* FIX: Education Section Mobile Transition & Cards */
+    .edu-scroll-track {
+        height: auto !important; /* Disable massive scroll height on mobile */
+    }
+    .edu-stage {
+        position: relative !important;
+        top: 0 !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem;
+    }
+    .edu-card-wrapper {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+        width: 100% !important;
+        pointer-events: auto !important;
+    }
+    .edu-card {
+        padding: 1.5rem;
+    }
+    .edu-degree {
+        font-size: 1.3rem;
+    }
+    .edu-institution {
+        font-size: 0.95rem;
+    }
+    .edu-timeline-bar,
+    .edu-badge-watermark {
+        display: none !important; /* Mobile Clean look */
+    }
+
+    /* Sticky Projects Stack Fix on Mobile */
+    .sticky-stack-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .project-card {
+        position: relative !important;
+        top: 0 !important;
+        margin-bottom: 0;
+        min-height: auto;
+        padding: 1.5rem;
+    }
+    .project-title {
+        font-size: 1.3rem;
+    }
+    .project-desc {
+        font-size: 0.88rem;
+    }
+
+    /* Swiss Grid (Skills/Experience) Responsive Fix */
+    .swiss-grid-container {
+        grid-template-columns: 1fr !important;
+        grid-auto-rows: auto !important;
+    }
+    .swiss-grid-cell {
+        padding: 1.5rem 1.2rem;
+        min-height: 180px;
+    }
     .swiss-grid-cell.cell-wide, 
     .swiss-grid-cell.cell-tall,
     .swiss-grid-cell.cell-huge {
         grid-column: span 1 !important;
         grid-row: span 1 !important;
     }
-
     .swiss-grid-cell.cell-large-text {
-        display: none;
+        display: none !important;
     }
 
+    /* Certifications Grid Fix */
+    .certs-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .cert-flip-card {
+        height: 260px;
+    }
+
+    /* Footer & Editorial */
     .editorial-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.8rem;
     }
-
     .editorial-ctas {
         flex-direction: column;
         width: 100%;
     }
-
     .editorial-btn {
         width: 100%;
         justify-content: center;
-    }
-}
-
-@media (max-width: 600px) {
-    .certs-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-num {
-        font-size: 0.85rem;
-        padding: 0.2rem 0.7rem;
     }
 }
