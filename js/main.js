@@ -614,3 +614,89 @@ if (menuToggle && navMenu) {
         });
     });
 }
+function setupEduScroll() {
+    // Disable complex desktop scroll animation on Mobile Screens (< 900px)
+    if (window.innerWidth <= 900) {
+        const eduCards = document.querySelectorAll('.edu-card-wrapper');
+        eduCards.forEach(card => {
+            card.style.opacity = '1';
+            card.style.transform = 'none';
+            card.style.filter = 'none';
+            card.style.pointerEvents = 'auto';
+        });
+        return;
+    }
+
+    const track = document.getElementById('eduScrollTrack');
+    const stage = document.getElementById('eduStage');
+    const cards = Array.from(document.querySelectorAll('.edu-card-wrapper'));
+    const progFill = document.getElementById('eduProgFill');
+    const stageCount = document.getElementById('eduStageCount');
+
+    if (!track || !stage || cards.length === 0) return;
+
+    function updateEdu() {
+        if (window.innerWidth <= 900) return;
+
+        const rect = track.getBoundingClientRect();
+        const trackH = track.offsetHeight;
+        const winH = window.innerHeight;
+
+        const scrolled = -rect.top;
+        const totalScrollable = trackH - winH;
+
+        let progress = scrolled / totalScrollable;
+        progress = Math.max(0, Math.min(1, progress));
+
+        if (progFill) progFill.style.height = `${progress * 100}%`;
+
+        const totalStages = cards.length;
+        const stageProgress = progress * (totalStages - 1);
+        const currentIndex = Math.floor(stageProgress);
+        const localProgress = stageProgress - currentIndex;
+
+        if (stageCount) {
+            stageCount.textContent = `0${Math.min(currentIndex + 1, totalStages)} / 0${totalStages}`;
+        }
+
+        cards.forEach((card, idx) => {
+            if (idx < currentIndex) {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(-60px) scale(0.92) rotateX(-10deg)';
+                card.style.filter = 'blur(10px)';
+                card.style.pointerEvents = 'none';
+            } else if (idx === currentIndex) {
+                const exitRatio = localProgress;
+                const opacity = 1 - exitRatio;
+                const translateY = -60 * exitRatio;
+                const scale = 1 - (0.08 * exitRatio);
+                const blur = 10 * exitRatio;
+
+                card.style.opacity = opacity.toFixed(3);
+                card.style.transform = `translateY(${translateY.toFixed(1)}px) scale(${scale.toFixed(3)}) rotateX(${-10 * exitRatio}deg)`;
+                card.style.filter = `blur(${blur.toFixed(1)}px)`;
+                card.style.pointerEvents = exitRatio > 0.5 ? 'none' : 'auto';
+            } else if (idx === currentIndex + 1) {
+                const enterRatio = localProgress;
+                const opacity = enterRatio;
+                const translateY = 60 * (1 - enterRatio);
+                const scale = 0.92 + (0.08 * enterRatio);
+                const blur = 10 * (1 - enterRatio);
+
+                card.style.opacity = opacity.toFixed(3);
+                card.style.transform = `translateY(${translateY.toFixed(1)}px) scale(${scale.toFixed(3)}) rotateX(${10 * (1 - enterRatio)}deg)`;
+                card.style.filter = `blur(${blur.toFixed(1)}px)`;
+                card.style.pointerEvents = enterRatio > 0.5 ? 'auto' : 'none';
+            } else {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(60px) scale(0.92) rotateX(10deg)';
+                card.style.filter = 'blur(10px)';
+                card.style.pointerEvents = 'none';
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateEdu, { passive: true });
+    window.addEventListener('resize', updateEdu);
+    updateEdu();
+}
